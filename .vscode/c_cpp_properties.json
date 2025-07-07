@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "Arduino",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/share/arduino/hardware/arduino/avr/cores/arduino",
+                "/usr/share/arduino/hardware/arduino/avr/variants/standard",
+                "/usr/lib/avr/include"
+            ],
+            "defines": [
+                "ARDUINO=10819",
+                "ARDUINO_AVR_UNO",
+                "ARDUINO_ARCH_AVR",
+                "__AVR__",
+                "__AVR_ATmega328P__",
+                "F_CPU=16000000L",
+                "UBRRH",
+                "UBRR0H"
+            ],
+            "compilerPath": "/usr/bin/avr-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64",
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "${workspaceFolder}/**",
+                    "/usr/share/arduino/hardware/arduino/avr/cores/arduino",
+                    "/usr/share/arduino/hardware/arduino/avr/variants/standard",
+                    "/usr/lib/avr/include"
+                ]
+            }
+        }
+    ],
+    "version": 4
+}
