@@ -1,0 +1,43 @@
+<circuit version="1.1.0" rev="1912+dfsg-4build2" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Resistor" CircId="Resistor-15" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="188,-420" rotation="90" hflip="1" vflip="1" label="Resistor-15" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="220 Ω" />
+
+<item itemtype="Ground" CircId="Ground-19" mainComp="false" Show_id="false" Show_Val="false" Pos="188,-328" rotation="0" hflip="1" vflip="1" label="Ground-19" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="SerialPort" CircId="SerialPort-32" mainComp="false" Show_id="false" Show_Val="false" Pos="260,-496" rotation="0" hflip="1" vflip="1" label="SerialPort-32" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Auto="false" Port="/tmp/ttyS1" Baudrate="9600 _Bauds" DataBits="8 _Bits" StopBits="1 _Bits" SerialMon="false" />
+
+<item itemtype="Push" CircId="Push-28" mainComp="false" Show_id="false" Show_Val="false" Pos="200,-580" rotation="0" hflip="1" vflip="1" label="Push-28" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
+
+<item itemtype="Subcircuit" CircId="Uno-11" mainComp="false" Show_id="true" Show_Val="false" Pos="140,-520" rotation="0" hflip="-1" vflip="1" label="Uno-11" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../Arduino/exampleL_test/test2/test2.ino.with_bootloader.standard.hex" Auto_Load="true" saveEepr="true" eeprom="109,56,84,45,242,178,13,38,235,141,168,91,198,78,6,11,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,85,0," SerialMon="-1" />
+</item>
+
+<item itemtype="Ssd1306" CircId="Ssd1306-26" mainComp="false" Show_id="true" Show_Val="false" Pos="-112,-512" rotation="0" hflip="1" vflip="1" label="Ssd1306-26" idLabPos="-32,-60" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="White" Width="128 _Pixels" Height="64 _Pixels" Control_Code="60" Frequency="100 _KHz" />
+
+<item itemtype="Ground" CircId="Ground-30" mainComp="false" Show_id="false" Show_Val="false" Pos="224,-528" rotation="0" hflip="1" vflip="1" label="Ground-30" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="LedRgb" CircId="LedRgb-41" mainComp="false" Show_id="false" Show_Val="false" Pos="220,-464" rotation="0" hflip="1" vflip="1" label="LedRgb-41" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" CommonCathode="true" Threshold_R="2.4 V" MaxCurrent_R="0.03 A" Resistance_R="0.6 Ω" Threshold_G="3.5 V" MaxCurrent_G="0.03 A" Resistance_G="0.6 Ω" Threshold_B="3.5 V" MaxCurrent_B="0.03 A" Resistance_B="0.6 Ω" />
+
+<item itemtype="Connector" uid="Connector-96" startpinid="Uno-11-6" endpinid="LedRgb-41-Pin2" pointList="132,-456,204,-456" />
+
+<item itemtype="Connector" uid="Connector-114" startpinid="Push-28-switch0pinN" endpinid="Ground-30-Gnd" pointList="216,-580,224,-580,224,-544" />
+
+<item itemtype="Connector" uid="Connector-61" startpinid="Ssd1306-26-PinSck" endpinid="Uno-11-A5" pointList="-160,-464,-160,-428,-12,-428,-12,-504" />
+
+<item itemtype="Connector" uid="Connector-95" startpinid="Uno-11-5" endpinid="LedRgb-41-Pin1" pointList="132,-464,204,-464" />
+
+<item itemtype="Connector" uid="Connector-97" startpinid="LedRgb-41-Pin3" endpinid="Resistor-15-lPin" pointList="236,-464,236,-436,188,-436" />
+
+<item itemtype="Connector" uid="Connector-41" startpinid="Resistor-15-rPin" endpinid="Ground-19-Gnd" pointList="188,-404,188,-344" />
+
+<item itemtype="Connector" uid="Connector-60" startpinid="Uno-11-A4" endpinid="Ssd1306-26-PinSda" pointList="-12,-496,-36,-496,-36,-464,-152,-464" />
+
+<item itemtype="Connector" uid="Connector-80" startpinid="Push-28-pinP0" endpinid="Uno-11-4" pointList="184,-580,184,-472,132,-472" />
+
+<item itemtype="Connector" uid="Connector-94" startpinid="Uno-11-3" endpinid="LedRgb-41-Pin0" pointList="132,-480,204,-480,204,-472" />
+
+<item itemtype="Connector" uid="Connector-70" startpinid="Uno-11-0" endpinid="SerialPort-32-pin0" pointList="132,-504,220,-504" />
+
+<item itemtype="Connector" uid="Connector-71" startpinid="SerialPort-32-pin1" endpinid="Uno-11-1" pointList="220,-488,132,-488,132,-496" />
+
+</circuit>
